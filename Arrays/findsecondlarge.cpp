@@ -5,7 +5,7 @@ using namespace std;
 
 int print2largest(vector<int> &arr)
 {
-    int largest = arr[0], slargest = 0;
+    int largest = arr[0], slargest = -1;
     if (arr.size() < 2)
     {
         return -1;
@@ -22,10 +22,7 @@ int print2largest(vector<int> &arr)
             slargest = arr[i];
         }
     }
-    if (largest == slargest || slargest == 0)
-    {
-        return -1;
-    }
+
     return slargest;
 }
 

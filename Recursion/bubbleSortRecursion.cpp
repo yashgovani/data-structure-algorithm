@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-void printArrayy(int *arr, int size)
+void printArray(int *arr, int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -33,6 +33,6 @@ int main()
     // int arr[size] = {52, 14, 61, 42, 78, 20, 7};
     int arr[size] = {10, 14, 28, 11, 7, 16, 30, 50, 25, 18};
     bubbleSort(arr, size);
-    printArrayy(arr, size);
+    printArray(arr, size);
     return 0;
 }
