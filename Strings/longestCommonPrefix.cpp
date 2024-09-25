@@ -46,7 +46,7 @@ string longestCommonPrefix(vector<string> &strs)
 string longestCommonPrefixOptimal(vector<string> &strs)
 {
     if (strs.empty())
-        return ""; // Handle empty input case
+        return "";
 
     string cmPrefix = strs[0];
     int n = strs.size();
@@ -55,16 +55,11 @@ string longestCommonPrefixOptimal(vector<string> &strs)
     {
         int j = 0;
         int minLength = std::min(cmPrefix.length(), strs[i].length());
-
         while (j < minLength && cmPrefix[j] == strs[i][j])
         {
             j++;
         }
-
-        // Update the common prefix to the new matched length
         cmPrefix = cmPrefix.substr(0, j);
-
-        // If at any point the common prefix is empty, return ""
         if (cmPrefix.empty())
         {
             return "";
